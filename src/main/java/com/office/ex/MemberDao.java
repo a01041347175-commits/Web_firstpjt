@@ -5,7 +5,7 @@ import java.util.Map;
 
 public class MemberDao {
 
-	public int insertNewMember(MemberDto memberDto) {
+	public static int insertNewMember(MemberDto memberDto) {
 		
 		Map<String, MemberDto> memDB = new HashMap<String, MemberDto>();
 		
@@ -14,4 +14,6 @@ public class MemberDao {
 		return memDB.get((memberDto).getMemId()) != null ? 1 : 0;
 	}
 
+	
+	
 }

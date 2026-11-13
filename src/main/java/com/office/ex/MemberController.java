@@ -15,25 +15,25 @@ public class MemberController extends HttpServlet {
        
     
     public MemberController() {
-        
-        
+       
     }
 
 	
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-		String RequstURI = request.getRequestURI();
+		
+		String RequestURI = request.getRequestURI();
 		String contextPath = request.getContextPath();
-		String command = RequstURI.substring(contextPath.length());
+		String command = RequestURI.substring(contextPath.length());
 		
 		MemberService memberService = null;
 		String nextPage = null;
 		
 		switch (command) {
-		case "/signup.mem": 
+		case "/signup.mem":
 			nextPage = "view/member/signup_form.jsp";
 			
 			break;
+
 		case "/signup_confirm.mem":
 			memberService = new MemberService();
 			
@@ -44,10 +44,9 @@ public class MemberController extends HttpServlet {
 			} else {
 				nextPage = "view/member/signup_ng.jsp";
 			}
-			
 			break;
-		case "/signin.mem":
 			
+		case "/signin.mem":
 			
 			break;
 		}
@@ -59,7 +58,7 @@ public class MemberController extends HttpServlet {
 
 	
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
+	
 		request.setCharacterEncoding("UTF-8");
 		doGet(request, response);
 	}

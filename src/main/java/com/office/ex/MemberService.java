@@ -16,7 +16,8 @@ public class MemberService {
 		
 		MemberDto memberDto = new MemberDto(memId, memPw, memMail, memPhone);
 		
-		int result = memberDao.insertNewMember(memberDto);
+		int result = MemberDao.insertNewMember(memberDto);
+		
 		
 		return result;
 	}
