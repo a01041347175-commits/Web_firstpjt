@@ -4,11 +4,14 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>Insert title here</title>
+<jsp:include page="../include/title.jsp"/>
 </head>
 <body>
 
-	This page is signup OK
+	<jsp:include page="../include/navi.jsp"/>
+
+	<br><br>
+	This page is signup OK!!
 
 </body>
 </html>

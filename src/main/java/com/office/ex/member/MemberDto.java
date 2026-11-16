@@ -1,4 +1,4 @@
-package com.office.ex;
+package com.office.ex.member;
 
 public class MemberDto {
 
@@ -7,7 +7,8 @@ public class MemberDto {
 	private String memMail;
 	private String memPhone;
 	
-	public MemberDto() {}
+	public MemberDto() {
+	}
 
 	public MemberDto(String memId, String memPw, String memMail, String memPhone) {
 		this.memId = memId;
@@ -47,7 +48,5 @@ public class MemberDto {
 	public void setMemPhone(String memPhone) {
 		this.memPhone = memPhone;
 	}
-	
-	
 	
 }
