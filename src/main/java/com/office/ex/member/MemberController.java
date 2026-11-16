@@ -8,6 +8,8 @@ import jakarta.servlet.http.HttpServletRequest;
 import jakarta.servlet.http.HttpServletResponse;
 import java.io.IOException;
 
+import com.office.ex.Config;
+
 
 @WebServlet("*.mem")
 public class MemberController extends HttpServlet {
@@ -74,6 +76,8 @@ public class MemberController extends HttpServlet {
 			
 		case MemberConfig.MEMBER_SIGNOUT_CONFIRM:
 			memberService.signoutConfirm(request, response);
+			
+			nextPage = request.getContextPath().concat(Config.HOME);
 			
 			break;
 			
